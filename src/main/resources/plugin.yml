@@ -1,0 +1,36 @@
+name: Soulbound
+version: 0.0.1-BETA
+main: io.github.jabamo.mcplugin.soulbound.Soulbound
+description: Minecraft plugin for inventory handling upon player death, etc.
+author: Jona Bastian
+website: https://jonabastian.io
+api-version: '26.3'
+# depend: TODO: check if we need ProtocolLib or different libraries
+permissions:
+  soulbound.editSettings:
+    description: Allows editing of plugin settings.
+    default: op
+  soulbound.chestUponDeath:
+    description: Has chest created upon player death.
+    default: false
+  soulbound.redeemTotem:
+    description: Allows usage of totem to keep inventory upon player death.
+    default: false
+    children:
+      soulbound.recipes: true
+  soulbound.recipes:
+    description: Allows usage of recipes.
+    default: false
+commands:
+  soulbound:
+    description: "Allows access to Soulbound's plugin commands."
+    usage: "/soulbound <arg>"
+    aliases: [ soulbound, sb ]
+    # permission: permission.node
+    permission-message: "You do not have permission to use this command."
+  sb:
+    description: "Allows access to Soulbound's plugin commands."
+    usage: "/sb <arg>"
+    aliases: [ soulbound, sb ]
+    # permission: permission.node
+    permission-message: "You do not have permission to use this command."
