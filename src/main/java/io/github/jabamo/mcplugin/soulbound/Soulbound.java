@@ -15,7 +15,7 @@ public final class Soulbound extends JavaPlugin implements Listener {
 
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
-        event.getPlayer().sendMessage("Willkommen, " + event.getPlayer().getName() + " auf JeuckCraft!");
+        event.getPlayer().sendMessage("Willkommen, " + event.getPlayer().getName() + " auf dem Server!");
     }
 
 }
